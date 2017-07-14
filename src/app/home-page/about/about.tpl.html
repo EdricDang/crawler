@@ -1,0 +1,53 @@
+<div class="about-us">
+    <div class="container">
+        <div class="img-about">
+            <img src="assets/images/about.png">
+        </div>
+        <div class="about-page">
+            <div class="link-web">
+                <a href="#" class="link-home">Home &nbsp;/&nbsp; </a>
+                <a href="" class="link-cate" ng-if="info_page.is_about">About us</a>
+                <a href="" class="link-cate" ng-if="info_page.is_custome"> Customer Service / Why AConCept</a>
+            </div>
+            <div class="title-about">
+                {{page.title}}
+            </div>
+            <p ng-bind-html="info_page.description"></p>
+            <div ng-if="info_page.is_about">
+                <div class="title-about out-ds">
+                    Our Designer
+                </div>
+                <div class="our-design" >
+                    <div class="row">
+                        <div class="col-sm-6 our-dss" ng-repeat="designs in design">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="img-design">
+                                        <svg viewBox="0 0 120 120">
+                                            <circle cx="55" cy="55" r="50" class="dashed"/>
+                                            <foreignObject x="5" y="5" height="150px" width="150px">
+                                                <div class="img-top">
+                                                    <img src="{{designs.src}}" alt="...">
+                                                </div>
+                                            </foreignObject>
+                                        </svg>
+
+                                        <div class="name-design">
+                                            {{designs.name}}
+                                        </div>
+                                        <div class="old-design">
+                                            {{designs.year}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    {{designs.description}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,143 @@
+/** Case Layout **/
+.case-header {
+	min-height: 50px;
+	width: 100%;
+	border-bottom: 1px solid #E9ECF0;
+/*	position: fixed;*/
+	top: 50px;
+	right: 0;
+	z-index: 10;
+	background: #f6f6f7;
+}
+.case-body {
+	padding-top: 40px;
+}
+.case-name {
+	position: absolute;
+	min-height: 40px;
+	min-width: 300px;
+	border-right: 1px solid #000;
+	text-align: center;
+}
+.case-name h4 {
+	margin: 0;
+	padding: 16px;
+	color: #575655;
+}
+.case-handle {
+	display: none;
+	position: absolute;
+	left: 300px;
+	min-height: 40px;
+	min-width: 40px;
+	border-right: 1px solid #E9ECF0;
+	text-align: center;
+	padding: 8px 0;
+	cursor: pointer;
+	font-size: x-large;
+}
+.case-done {
+	position: absolute;
+	left: 300px;
+	min-height: 40px;
+	min-width: 180px;
+	border-right: 1px solid #E9ECF0;
+	text-align: center;
+	padding: 12px 0;
+	font-weight: bold;
+	font-size: large;
+	text-decoration: none;
+	cursor: pointer;
+}
+.case-done a:hover {
+	text-decoration: none;
+}
+.wrap-case-menu {
+	background: #efeff4 !important;
+	border-right: 1px solid #000 !important;
+}
+.wrap-case-menu .case-menu {
+	
+}
+
+.wrap-case-menu .case-menu .step-active {
+	background: #d9d9d9 !important;
+	font-weight: 600 !important;
+	color: #4a4a4a !important;
+}
+
+.wrap-case-menu .case-menu ul li:first-child {
+	margin: 25px 0 !important;
+}
+
+.wrap-case-menu .case-menu ul li:last-child {
+	margin: 25px 0 !important;
+	color: #A20F0F;
+}
+
+/*@media screen and (max-width:1024px) {
+    .case-name {	
+		min-height: 40px;
+		width: 100%;
+		border-right: 1px solid #E9ECF0;
+		text-align: center;
+	}
+	.case-handle {
+		display: block;
+		position: absolute;
+		left: 0px;
+		min-height: 40px;
+		min-width: 40px;
+		border-right: 1px solid #E9ECF0;
+	}
+	.case-done {
+		padding: 12px;
+		position: absolute;
+		right: 0;
+		left: inherit;
+		min-height: 40px;
+		min-width: 40px;
+		border-left: 1px solid #E9ECF0;
+	}
+}*/
+
+/* ui tree */
+.tree-node {
+    border: 1px solid #dae2ea;
+    background: #f8faff;
+    color: #7c9eb2;
+}
+.tree-node-content {
+    margin: 10px;
+}
+.tree-handle {
+    padding: 10px;
+    background: #428bca;
+    color: #FFF;
+    margin-right: 10px;
+}
+
+.angular-ui-tree-handle {
+    background: #f8faff;
+    border: 1px solid #dae2ea;
+    color: #7c9eb2;
+    padding: 10px 10px;
+}
+
+.angular-ui-tree-handle:hover {
+    color: #438eb9;
+    background: #f4f6f7;
+    border-color: #dce2e8;
+}
+
+.angular-ui-tree-placeholder {
+    background: #f0f9ff;
+    border: 2px dashed #bed2db;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.angular-ui-tree-empty {
+  background: whitesmoke !important;
+}

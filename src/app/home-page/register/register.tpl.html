@@ -1,0 +1,79 @@
+<div class="register-page">
+    <div class="container">
+        <div class="link-web">
+            <a href="#" class="link-home">Home &nbsp;/&nbsp; </a>
+            <a href="" class="link-cate">Sign Up</a>
+        </div>
+        <div class="top-product-title">
+            <div class="line left-line">
+            </div>
+            <div class="title-line">
+                Sign Up
+            </div>
+        </div>
+        <div class="form-sign-up">
+            <div class="frm-register">
+                <div class="title-sign-up">
+                    <img src="assets/images/background/welcome.png">
+                </div>
+                <form role="form" class="frm-catalogues" ng-submit="register()">
+                    <div class="categories-input-form">
+                        <div class="form-group input-catalogues">
+                            <input tabindex="1" class="form-control" name="name" type="text" placeholder="Name"
+                                   ng-model="user.name" required>
+                            <div class="span-catalogue">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="form-group input-catalogues">
+                            <input tabindex="2" class="form-control" name="phone-number" type="text"
+                                   placeholder="Phone Number"
+                                   ng-model="user.phone" required>
+                            <div class="span-catalogue">
+                                <i class="fa fa-mobile" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="form-group input-catalogues">
+                            <input tabindex="3" class="form-control" name="email" type="text" placeholder="Email"
+                                   ng-model="user.email" required>
+                            <div class="span-catalogue">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="form-group input-catalogues">
+                            <input tabindex="4" class="form-control" name="address" type="text" placeholder="Address"
+                                   data-toggle="tooltip" data-placement="top" title="Street,District,City"
+                                   ng-model="user.address" required>
+                            <div class="span-catalogue">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="form-group input-catalogues">
+                            <input tabindex="5" class="form-control" name="password" type="password"
+                                   placeholder="Password"
+                                   ng-model="user.password" required>
+                            <div class="span-catalogue">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="form-group input-catalogues">
+                            <input tabindex="6" class="form-control" name="confirm-password" type="password"
+                                   placeholder="Confirm password"
+                                   ng-model="user.confirm_password" required>
+                            <div class="span-catalogue">
+                                <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                        <div class="btn-primary-pro">
+                            <button type="submit" class="btn btn-pro-add btn-pro-add-cart">continue</button>
+                        </div>
+                        <div class="text-footer-signup">
+                            Creating an account means you’re okay with AConcept's Terms of Service, Privacy Policy
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

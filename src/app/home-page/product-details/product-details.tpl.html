@@ -1,0 +1,66 @@
+<div class="product-container-page">
+    <div class="product-details-page container">
+        <div class="link-web">
+            <a href="#" class="link-home">Home &nbsp;/&nbsp; </a>
+            <a class="link-cate">{{product.title}}</a>
+        </div>
+        <div class="product-details-info row">
+            <div class="col-sm-6">
+                <div class="product-image">
+                    <div class="image-primary">
+                        <img src="{{imgPrimary}}">
+                        <div class="icon-zoom" data-toggle="modal" data-target="#myModal" type="button">
+                        </div>
+                    </div>
+                    <div class="image-sub">
+                        <ul>
+                            <li ng-repeat="img in image">
+                                <img src="{{img.src}}" ng-click="changeImagePrimary(img.src)">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 product-detail-background">
+                <div class="product-detail-padding">
+                    <div class="name-product">
+                        {{product.title}}
+                    </div>
+                    <div class="description-product">
+                        {{product.description}}
+                    </div>
+                    <div class="price-product">
+                        {{product.discount_price | currency:"":0}} VND
+                    </div>
+                    <div class="description-product">
+                        <b>Color:</b><br>
+                        {{product.color_name}}
+                    </div>
+                    <div class="btn-color-cover">
+                        <div ng-repeat="color in product.colors">
+                            <div class="btn-padding">
+                                <button type="button" class="btn btn-default btn-color"
+                                        ng-style="{background: url({{color.color_src}})" ng-click="changeColor(color)"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="btn-primary-pro">
+                        <button type="button" class="btn btn-pro-add btn-pro-add-cart" ng-click="addCart(product)">Add to cart</button>
+                        <button type="button" class="btn btn-pro-add btn-pro-add-wish-list">Add to wish list</button>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div data-ng-include=" 'home-page/product-details/modal-image.tpl.html' "></div>
+        </div>
+    </div>
+</div>
+
+<div data-ng-include=" 'home-page/common/popular-item.tpl.html' "></div>

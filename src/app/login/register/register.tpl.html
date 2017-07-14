@@ -1,0 +1,92 @@
+<div class="main-login">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="welcome">
+                <div class="title">Welcome</div>
+                <div class="sub-title">to <span>Resuscitation Cases Builder</span></div>
+                <div class="description">Come a long with the <span>Resuscitation mobile game. </span> <br><span>Resuscitation cases builder</span> is a <span>website platform </span> allow users to:</div>
+                <div class='intro-action'>
+                    <div class="intro-group icon-cases">
+                        <div class="intro-title">CREATE & MANAGE NEW CASES</div>
+                        <div class="intro-des">for the mobile game with full case builder tool</div>
+                    </div>
+                </div>
+                <div class='intro-action'>
+                    <div class="intro-group icon-students">
+                        <div class="intro-title">SHARE CASES</div>
+                        <div class="intro-des">with your friends and tutors to receive comment, review and rate</div>
+                    </div>
+                </div>
+                <div class='intro-action'>
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    <div class="intro-group">
+                        <div class="intro-title">KEEP TRACK OF YOUR ASSIGNMENTS</div>
+                        <div class="intro-des">receive detail metrics and feedback from your tutor. </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="sign-up">
+                <div class="banner-title">
+                    <p class="p-title"><span>sign up</span> for <span>free!</span></p>
+                    <p class="p-des"><span>Create</span> and <span>manage</span> your own resuscitation cases easily</p>
+                </div>
+                <div class="signup-body">
+                    <form name="frmRegister" role="form" ng-submit="signup()">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" placeholder="Type your email" class="form-control" autofocus ng-model="register.email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="userName">Username</label>
+                                    <input type="text" name="userName" placeholder="Type your username" class="form-control" ng-model="register.userName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" equals="{{register.confirmPassword}}" placeholder="Type your password" class="form-control" ng-model="register.password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm password</label>
+                                    <input type="password" name="confirmPassword" equals="{{register.password}}" placeholder="Confirm your password" class="form-control" ng-model="register.confirmPassword" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="firstName">First name</label>
+                                    <input type="text" name="firstName" placeholder="Your first name" class="form-control" ng-model="register.firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last name</label>
+                                    <input type="text" name="lastName" placeholder="Your last name" class="form-control" ng-model="register.lastName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="birthday">Birthday</label>
+                                    <input type="date" name="birthday" class="form-control" ng-model="register.birthday" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobile">Phone number</label>
+                                    <input type="text" name="mobile" phone="{{register.mobile}}" class="form-control" ng-model="register.mobile" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <select name="gender" class="form-control select-gender" ng-model="register.gender" required>
+                                        <option value="">Choose your gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group btn-sign-up">
+                                <button type="submit" ng-disabled="frmRegister.$invalid" class="btn btn-default">SIGN UP</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

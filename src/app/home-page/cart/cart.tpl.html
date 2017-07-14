@@ -1,0 +1,65 @@
+<div class="cart-page">
+    <div class="container">
+        <div class="break-dump">
+            <a href="#" class="link-home">Home &nbsp;/&nbsp; </a>
+            <a href="#/home/cart" class="link-cate">Cart</a>
+        </div>
+        <div class="cart-title">
+            Shopping Cart
+        </div>
+        <table style="width: 100%">
+            <tr ng-repeat="carts in cart">
+                <td>
+                    <div class="icon-cart-delete" ng-click="remove_to_cart(carts)">
+                        x
+                    </div>
+                </td>
+                <td>
+                    <div class="img-small-cart">
+                        <img src="{{carts.colors[0].images[0].src}}">
+                    </div>
+                </td>
+                <td>
+                    <div class="info-small-cart">
+                        <div class="title">
+                            {{carts.title}}
+                        </div>
+                        <div class="price-pro">
+                            {{carts.quantity}} x {{carts.discount_price | currency:"":0}} VND
+                        </div>
+                    </div>
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <div class="info-small-cart">
+                        <div class="subtotal">
+                            subtotal:
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="info-small-cart">
+                        <div class="total">
+                            {{subtotal}} VND
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="btn-cart-small">
+            <button class="btn btn-default btn-small-cart btn-view-cart" ng-click="goCart()">View Cart
+            </button>
+        </div>
+        <div class="btn-cart-small">
+            <button class="btn btn-default btn-small-cart btn-checkout" ng-click="goCheckout()">Checkout
+            </button>
+        </div>
+    </div>
+</div>

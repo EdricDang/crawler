@@ -1,0 +1,61 @@
+<div class="top-cate">
+    <div class="container">
+        <div class="banner-top">
+            <img src="assets/images/bn-list-product.png">
+        </div>
+    </div>
+</div>
+
+
+<div class="categories-background">
+    <div class="categories-page container">
+        <div class="row">
+            <div class="link-web">
+                <a href="#" class="link-home">Home &nbsp;/&nbsp; </a>
+                <a ng-click="goCategories()" class="link-cate">{{category_info.name}}</a>
+            </div>
+            <div class="col-sm-3" ng-repeat="product in list_product_cate">
+                <div class="product-item">
+                    <div class="product-img-cate">
+                        <img src="{{product.colors[0].images[0].src}}" ng-click="goDetails(product.id)">
+                    </div>
+                    <div class="product-name">
+                        {{product.title}}
+                    </div>
+                    <div class="product-price">
+                         {{product.colors[0].discount_price | currency:"":0}} VND
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container favorite-product furniture-page">
+        <div class="top-product-title cate-popula">
+            <div class="line left-line">
+            </div>
+            <div class="title-line">
+                POPULAR ITEM
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 product-popular" ng-repeat="favorite in list_popular">
+                <div class="produc-popular-padding">
+                    <div class="product-img popolar-img-width">
+                        <img src="{{favorite.colors[0].images[0].src}}">
+                    </div>
+                    <div class="info-product">
+                        <div class="name-product">
+                            {{favorite.title}}
+                        </div>
+                        <div class="price-product">
+                            {{favorite.colors[0].discount_price | currency:"":0}} VND
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

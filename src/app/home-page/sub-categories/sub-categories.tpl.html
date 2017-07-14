@@ -1,0 +1,34 @@
+
+<div class="sub-categories">
+    <div class="container">
+        <div class="link-web">
+            <a href="#" class="link-home">Home &nbsp;/&nbsp; </a>
+            <a ng-click="goCategories()" class="link-cate">{{cate.name}}</a>
+        </div>
+        <tabset active="activeJustifiedsss">
+                <tab ng-repeat="list_category in list_cate" heading="{{list_category.name}}" class="title-anlysetab" >
+                    <div class="categories-page">
+                        <div class="row">
+                            <div class="col-sm-3" ng-repeat="product in list_category.products">
+                                <div class="product-item">
+                                    <div class="product-img-cate">
+                                        <img src="{{product.colors[0].images[0].src}}" ng-click="goDetails(product.id)">
+                                    </div>
+                                    <div class="product-name">
+                                        {{product.title}}
+                                    </div>
+                                    <div class="product-price">
+                                        {{product.colors[0].discount_price | currency:"":0}} VND
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </tab>
+        </tabset>
+    </div>
+</div>
+
+
+

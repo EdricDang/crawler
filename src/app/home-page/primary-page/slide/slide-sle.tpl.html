@@ -1,0 +1,25 @@
+<div class="home-top-slide">
+    <div id="carousel-example-generic-sleep" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" ng-repeat="sleep_lst_active in list_sleeping_active" ng-click="goCategoriesPage(35)">
+                <img src="{{sleep_lst_active.colors[0].images[1].src}}">
+            </div>
+            <div class="item" ng-repeat="sleep_lst in list_sleeping" ng-click="goCategoriesPage(35)">
+                <img src="{{sleep_lst.colors[0].images[1].src}}" ng-if="sleep_lst.colors[0].images[0].src">
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic-sleep" role="button" data-slide="prev">
+            <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+            <img src="assets/images/slide/left.png" class="btn-slide-control btn-new-left">
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic-sleep" role="button" data-slide="next">
+            <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+            <img src="assets/images/slide/right.png" class="btn-slide-control btn-new-right">
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>

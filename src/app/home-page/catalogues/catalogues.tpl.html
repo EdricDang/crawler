@@ -1,0 +1,79 @@
+<div class="catalogues-page">
+    <div class="container">
+        <div class="break-dump">
+            <a href="#" class="link-home">Home &nbsp;/&nbsp; </a>
+            <a href="" class="link-cate">Catalogues</a>
+        </div>
+        <div class="title-catalogues">
+            Catalogues
+        </div>
+        <div data-configid="28739871/47169813" style="width:100%; height:640px;" class="issuuembed"></div>
+        <script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
+
+        <div class="catalogues-info">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="catalogue-padding">
+                        <div class="catalogue-title">
+                            The design catalogue
+                        </div>
+                        <div class="catalogue-details">
+                            Lots and lots of interior inspiration, tips and trends. Send in your order now and have the
+                            design catalogue in just a few days.
+                        </div>
+                        <div data-ng-include=" 'home-page/catalogues/form-catalogues.tpl.html' "></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="catalogue-left">
+                        <img src="{{img_3d}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalogues-product">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="catalogues-list-product">
+                        <div class="row">
+                            <div class="col-sm-4 catalogue-item" ng-repeat="img in threeD.images">
+                                <img src="{{img.src}}">
+                                <div class="link3D">
+                                    <img src="assets/images/catalogue/3d-icon.png">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="catalogue-3d-padding">
+                        <div class="catalogue-title-3d">
+                            {{threeD.name}}
+                        </div>
+                        <div class="catalogue-content-3d">
+                            {{threeD.description}}
+                        </div>
+                        <div class="btn-primary-pro">
+                            <a type="button" class="btn btn-pro-add btn-pro-add-cart" href="{{threeD.url}}">See more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container catalogue-popular favorite-product furniture-page">
+    <div class="row">
+        <div class="col-sm-3" ng-repeat="catalog in cata">
+            <div class="catalogue-img-popular" ng-click="goLink(catalog.url)">
+                <img src="{{catalog.images[0].src}}">
+                <div class="info-product">
+                    <div class="name-product">
+                       <a href="{{catalog.url}}"> {{catalog.name}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

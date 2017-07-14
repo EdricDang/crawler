@@ -1,0 +1,36 @@
+<div class="login-page">
+    <button type="button" class="close pull-right" ng-click="cancel()">×</button>
+    <img src="assets/images/logo.png">
+    <div class="title-sign-in">
+        Sign in to experience our collection
+    </div>
+    <form role="form" class="frm-catalogues">
+        <div class="categories-input-form">
+            <div class="form-group input-catalogues">
+                <label>Phone Number</label>
+                <input tabindex="1" class="form-control" name="phone-number" type="text"
+                       ng-model="user.phone" required>
+
+            </div>
+            <div class="form-group input-catalogues">
+                <label>Password</label>
+                <input tabindex="2" class="form-control" name="email" type="password"
+                       ng-model="user.password" required>
+            </div>
+            <div class="form-group input-catalogues">
+                <div class="forgot-pass pull-right">
+                    <a tabindex="4" ng-click="forgotPass()">
+                        Forgot Password?
+                    </a>
+                </div>
+            </div>
+            <div class="btn-primary-pro">
+                <button type="button" class="btn btn-pro-add btn-pro-add-cart" ng-click="login()">Continue</button>
+            </div>
+            <div class="dont-account">
+                Don't have an account?
+                <a ng-click="goSignUp()">SIGN UP</a>
+            </div>
+        </div>
+    </form>
+</div>

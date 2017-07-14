@@ -1,0 +1,41 @@
+<div class="email-confirm">
+    <div class="email-top">
+        <nav class="navbar navbar-default">
+            <div class="nav-menu">
+                <ul class="nav navbar-nav">
+                    <li class="active col-xs-4">
+                        <i class="fa fa-envelope-square" aria-hidden="true"></i>
+                        <span>1. Confirm email</span>
+                    </li>
+                    <li class="col-xs-4">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                        <span>2. Reset password</span>
+                    </li>
+                    <li class="col-xs-4">
+                        <i class="icon-complete" aria-hidden="true"></i>
+                        <span>3. Complete</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="email-main">
+        <div class="form-email">
+            <div class="intro">
+                Provide your <span>Email</span><br>
+                so we can help you reset your password
+            </div>
+            <form role="form" ng-submit="confirmEmail()" name="frmEmailConfirm" ng-controller="ConfirmEmailController">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>EMAIL</label>
+                        <input type="email" class="form-control" placeholder="Type your email" name="email" ng-model="forgot.email" required>
+                    </div>
+                </div>
+                <div class="form-group btn-confirm">
+                    <button type="submit" ng-disabled="frmEmailConfirm.$invalid" class="btn btn-default">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

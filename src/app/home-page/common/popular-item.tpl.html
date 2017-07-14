@@ -1,0 +1,24 @@
+<div class="container favorite-product popular-item">
+    <div class="container favorite-product furniture-page">
+        <div class="top-product-title">
+            <div class="line left-line">
+            </div>
+            <div class="title-line">
+                POPULAR ITEM
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 product-popular" ng-repeat="popular in list_popular">
+                <img src="{{popular.colors[0].images[0].src}}">
+                <div class="info-product">
+                    <div class="name-product">
+                        {{popular.title}}
+                    </div>
+                    <div class="price-product">
+                        {{popular.colors[0].discount_price | currency:"":0}} VND
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

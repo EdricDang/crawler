@@ -1,0 +1,117 @@
+<div data-ng-include=" 'home-page/common/slide.tpl.html' "></div>
+<!--funiture-->
+<div class="product-home-content container funiture-home funiture-padding">
+    <div class="row">
+
+        <div class="col-md-4 funi-top">
+            <div class="funi-left-bottom">
+                <div class="category-dinning product-home-category funiture-dinning"
+                     ng-repeat="one in list_one">
+                    <div class="dinng-img-sld">
+                        <img src="{{one.image.src}}" ng-click="goHightlight(one.category_id)">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 funi-top">
+            <div class="funi-left-bottom">
+                <div class="category-dinning product-home-category funiture-dinning"
+                     ng-repeat="two in list_two">
+                    <div class="dinng-img-sld">
+                        <img src="{{two.image.src}}" ng-click="goHightlight(two.category_id)">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 funi-top">
+            <div class="funi-left-bottom">
+                <div class="category-dinning product-home-category funiture-dinning"
+                     ng-repeat="three in list_three">
+                    <div class="dinng-img-sld">
+                        <img src="{{three.image.src}}" ng-click="goHightlight(three.category_id)">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <br><br>
+        <div class="col-md-3">
+            <div class="funi-left-top">
+                <div class="product-home-category funiture-storing" ng-repeat="storing in list_storing">
+
+                    <div class="funi-img-storing">
+                        <img src="{{storing.image.src}}" ng-click="goHightlight(storing.category_id)">
+
+                    </div>
+                </div>
+            </div>
+            <div class="funi-left-bottom">
+                <div class="category-dinning product-home-category funiture-dinning"
+                     ng-repeat="dinning in list_dinning">
+                    <div class="dinning-sld">
+                        <img src="{{dinning.image.src}}" ng-click="goHightlight(dinning.category_id)">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="funi-center-top">
+                <div class="product-home-category product-new" ng-repeat="new in list_new">
+                    <div class="slide-new">
+                        <img src="{{new.image.src}}" ng-click="goHightlight(new.category_id)">
+                    </div>
+                </div>
+            </div>
+            <div class="funi-center-bottom">
+                <div class="funiture-home-sleeping product-home-category funiture-sleep" ng-repeat="sleep in list_sleeping">
+                    <img src="{{sleep.image.src}}" ng-click="goHightlight(sleep.category_id)" >
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="funi-right-top">
+                <div class="category-living product-home-category funiture-living" ng-repeat="living in list_living">
+                    <img src="{{living.image.src}}" ng-click="goHightlight(living.category_id)">
+
+                </div>
+
+            </div>
+            <div class="funi-right-botom">
+                <div class="category-working product-home-category funiture-working"  ng-repeat="work in list_working">
+                    <img src="{{work.image.src}}" ng-click="goHightlight(work.category_id)">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Popular item-->
+<div class="container favorite-product">
+    <div class="container favorite-product furniture-page">
+        <div class="top-product-title">
+            <div class="line left-line">
+            </div>
+            <div class="title-line">
+                POPULAR ITEM
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 product-popular" ng-repeat="popular in list_popular">
+                <img src="{{popular.colors[0].images[0].src}}">
+                <div class="info-product">
+                    <div class="name-product">
+                        {{popular.title}}
+                    </div>
+                    <div class="price-product">
+                        {{popular.discount_price | currency:"":0}} VND
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

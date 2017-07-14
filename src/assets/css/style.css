@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'San Francisco Display Bold';
+    src: url(../fonts/SFUIDisplay-Bold.ttf);
+}
+@font-face {
+    font-family: 'San Francisco Display Regular';
+    src: url(../fonts/SFUIDisplay-Regular.ttf);
+}
+@font-face {
+    font-family: 'San Francisco Display SemBd';
+    src: url(../fonts/SFUIDisplay-Semibold.ttf);
+}
+@font-face {
+    font-family: 'San Francisco Display Med';
+    src: url(../fonts/SFCompactDisplay-Medium.ttf);
+}

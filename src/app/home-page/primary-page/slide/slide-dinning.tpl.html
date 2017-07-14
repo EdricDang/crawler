@@ -1,0 +1,30 @@
+<div class="home-top-slide">
+    <div id="carousel-example-generic-dinning" class="carousel slide" data-ride="carousel" data-interval="false">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" ng-repeat="dinning_lst_active in list_dinning_active"
+                 ng-click="goCategoriesPage(34)">
+                <div class="living-iteam-img">
+                    <img src="{{dinning_lst_active.colors[0].images[1].src}}">
+                </div>
+            </div>
+            <div class="item" ng-repeat="dinning_lst in list_dinning" ng-click="goCategoriesPage(34)">
+                <div class="living-iteam-img">
+                    <img src="{{dinning_lst.colors[0].images[1].src}}" ng-if="dinning_lst.colors[0].images[0].src">
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic-dinning" role="button" data-slide="prev">
+            <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+            <img src="assets/images/slide/left.png" class="btn-slide-control">
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic-dinning" role="button" data-slide="next">
+            <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+            <img src="assets/images/slide/right.png" class="btn-slide-control btn-sto-right">
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>

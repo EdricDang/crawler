@@ -1,0 +1,112 @@
+<div class="home-out-design container">
+    <div class="col-sm-6 home-design-primary home-design">
+        <div class="title-our-design">
+            Our designer
+        </div>
+        <div id="carousel-example-generic-our" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic-our" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic-our" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic-our" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active" ng-repeat="fts in design_first">
+                    <div class="img-design-avatar">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="55" cy="55" r="50" class="dashed"/>
+                            <foreignObject x="5" y="5" height="50px" width="50px">
+                                <div class="img-top">
+                                    <img src="{{fts.src}}" alt="...">
+                                </div>
+                            </foreignObject>
+                        </svg>
+                    </div>
+
+                    <div class="carousel-caption">
+                        <div class="name-design">
+                            {{fts.name}}
+                        </div>
+                        <div class="year-of-design">
+                            {{fts.year}}
+                        </div>
+                        <div class="design-info">
+                            {{fts.description | cut:true:150:' ...'}}
+                        </div>
+                    </div>
+                </div>
+                <div class="item"  ng-repeat="fts_ds in design">
+                    <div class="img-design-avatar">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="55" cy="55" r="50" class="dashed"/>
+                            <foreignObject x="5" y="5" height="50px" width="50px">
+                                <div class="img-top">
+                                    <img src="{{fts_ds.src}}" alt="...">
+                                </div>
+                            </foreignObject>
+                        </svg>
+                    </div>
+
+                    <div class="carousel-caption">
+                        <div class="name-design">
+                            {{fts_ds.name}}
+
+                        </div>
+                        <div class="year-of-design">
+                            {{fts_ds.year}}
+                        </div>
+                        <div class="design-info">
+                            {{fts_ds.description | cut:true:150:' ...'}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic-our" role="button" data-slide="prev">
+                <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+                <img src="assets/images/slide/left.png" class="btn-slide-control btn-dsg-home">
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic-our" role="button" data-slide="next">
+                <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+                <img src="assets/images/slide/right.png" class="btn-slide-control btn-dsg-home">
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-6 home-design-primary home-office" ng-click="goStore()">
+        <img src="assets/images/charlietown_002.jpg">
+        <div class="home-office-info">
+            <div class="padding-office">
+                <div class="title-our-design">
+                    Store
+                </div>
+                <div class="address-office">
+                    <table style="width:100%">
+                        <tr>
+                            <td ng-repeat = "stores in store">
+                                <div class="office-details">
+                                    <div class="icon-office">
+                                        <img src="assets/images/ic-7.png">
+                                    </div>
+                                    <div class="text-office">
+                                        <div class="name-office">
+                                            {{stores.name}}
+                                        </div>
+                                        <div class="addr-office">
+                                           {{stores.address}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

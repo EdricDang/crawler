@@ -1,0 +1,68 @@
+<div class="store-page">
+    <div class="container">
+        <div class="store-pading">
+            <div class="link-web">
+                <a href="#" class="link-home">Home &nbsp;/&nbsp; </a>
+                <a class="link-cate">Store</a>
+            </div>
+            <tabset active="activeJustifiedsss">
+                <tab ng-repeat="stores in store" heading="{{stores.name}}" class="title-anlysetab">
+                    <div class="store-page-info">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="img-st">
+                                    <img src="assets/images/store.jpg">
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="name-store">
+                                    {{stores.name}}
+                                </div>
+                                <div class="info-store">
+                                    <p>If you want to know more about AConcept, please contact us at:</p>
+                                    <p><i class="fa fa-home" aria-hidden="true"></i>&nbsp; {{stores.address}}</p>
+                                    <p><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; {{stores.phone}}</p>
+                                    <p><i class="fa fa-cloud" aria-hidden="true"></i></i>&nbsp; {{stores.fax}}</p>
+                                    <p><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;{{stores.email}}</p>
+                                </div>
+                                <div class="bottom-sto-rd">
+                                    <p>
+                                        Read more about the AConcept Holding A/S - the company behind AConcept A/S and
+                                        the AConcept Brand Stores, Inspiration Stores and Studios.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="name-store">
+                                    Opening hours
+                                </div>
+                                <div class="hours">
+                                    <div ng-repeat="detail in stores.details">
+                                        <div class="day-store">
+                                            {{detail.week}}
+                                        </div>
+                                        <div class="hours-store">
+                                            {{detail.open}} - {{detail.close}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="name-store">
+                                    Google Maps
+                                </div>
+                                <div class="map">
+                                    <a href="{{stores.google_map}}">
+                                        <img src="assets/images/map.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+</div>
